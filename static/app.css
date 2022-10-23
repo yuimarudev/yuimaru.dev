@@ -1,0 +1,30 @@
+body {
+  color: #ffffff;
+  background: #192734;
+}
+
+.center {
+  text-align: center;
+}
+
+main {
+  padding-top: 1em;
+}
+
+footer {
+  background: #192734;
+  padding-top: 1.2em;
+}
+
+img {
+  max-width: min(100%, 360px);
+}
+
+.static {
+  position: static;
+  height: 5rem;
+}
+
+#content {
+  white-space: pre;
+}
