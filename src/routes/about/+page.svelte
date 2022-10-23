@@ -11,7 +11,11 @@
   <Col>
     <div>
       <h1>About me</h1>
-      <p>好きな言語がTypeScriptとRustな学生</p>
+      <p>
+        TypeScript -er <br />
+        Rustacean <br />
+        に、なりたい
+      </p>
       <p>このサイトの<a href="https://github.com/yuimaru/yuimaru.dev">ソースコード</a></p>
       <a href="https://github.com/yuimaru">GitHub</a>
     </div>
