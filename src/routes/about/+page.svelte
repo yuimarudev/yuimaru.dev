@@ -16,8 +16,8 @@
         Rustacean <br />
         に、なりたい
       </p>
-      <p>このサイトの<a href="https://github.com/yuimaru/yuimaru.dev">ソースコード</a></p>
-      <a href="https://github.com/yuimaru">GitHub</a>
+      <p>このサイトの<a href="https://github.com/yuimarudev/yuimaru.dev">ソースコード</a></p>
+      <a href="https://github.com/yuimarudev">GitHub</a>
     </div>
   </Col>
   <Col>
