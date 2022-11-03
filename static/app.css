@@ -1,6 +1,6 @@
 body {
   color: #ffffff;
-  background: #192734;
+  background: #000;
 }
 
 .center {
@@ -12,7 +12,7 @@ main {
 }
 
 footer {
-  background: #192734;
+  background: #000;
   padding-top: 1.2em;
 }
 
