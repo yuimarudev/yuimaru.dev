@@ -2,6 +2,7 @@
   import client from "$lib/client";
   import { onMount } from "svelte";
   import { Row, Col, Card, CardBody, CardFooter } from "sveltestrap";
+  import "highlight.js/styles/github-dark.css";
 
   let articles: Article[] = [];
 
