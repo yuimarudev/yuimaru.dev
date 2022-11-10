@@ -1,11 +1,17 @@
 <script>
   import { Row, Col } from "sveltestrap";
   import { onMount } from "svelte";
+  import "highlight.js/styles/github-dark.css";
 
   export /**
    * @type {{article: Article}}
    */
   let data;
+
+  onMount(async () => {
+    const hljs = (await import("highlight.js")).default;
+    hljs.highlightAll();
+  });
 </script>
 
 <svelte:head>
