@@ -32,6 +32,6 @@
     "nanoid": "^4.0.0",
     "parse5": "^7.0.0",
     "sass": "^1.55.0",
-    "sveltestrap": "^5.9.0"
+    "sveltestrap": "^5.10.0"
   }
 }
