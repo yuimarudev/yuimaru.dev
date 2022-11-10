@@ -15,7 +15,9 @@
       theme: "github-dark"
     });
     [...document.querySelectorAll("pre code")].forEach((e) => {
-      e.innerHTML = highlighter.codeToHtml(e.innerHTML);
+      const [lang, ...lines] = e.innerHTML.split("\n");
+      const code = lines.join("\n");
+      e.innerHTML = highlighter.codeToHtml(code, lang);
     });
   });
 </script>
