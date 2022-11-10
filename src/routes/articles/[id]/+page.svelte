@@ -1,8 +1,6 @@
 <script lang="ts">
   import { Row, Col } from "sveltestrap";
   import { onMount } from "svelte";
-  import type { Lang } from "shiki";
-
 
   let data: {article: Article};
 
@@ -10,9 +8,10 @@
     const shiki = await import("shiki");
     shiki.setCDN("https://unpkg.com/shiki/");
 
-    const langs = [...document.querySelectorAll("pre code")].map(e => e.innerHTML.split("\n")[0] as Lang);
+    const langs = [...document.querySelectorAll("pre code")].map(e => e.innerHTML.split("\n")[0]);
     const highlighter = await shiki.getHighlighter({
       theme: "github-dark",
+      // @ts-ignore
       langs
     });
     document.querySelectorAll("pre code").forEach((e) => {
