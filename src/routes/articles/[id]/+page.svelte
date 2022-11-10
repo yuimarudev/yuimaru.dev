@@ -19,6 +19,7 @@
     document.querySelectorAll("pre code").forEach((e) => {
       const [lang, ...lines] = e.innerHTML.split("\n");
       const code = lines.join("\n");
+      console.log(highlighter.codeToHtml(code, lang));
       e.innerHTML = highlighter.codeToHtml(code, lang);
     });
   });
