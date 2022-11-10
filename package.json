@@ -9,7 +9,9 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --check --plugin-search-dir=. .",
-    "format": "prettier --write --plugin-search-dir=. ."
+    "format": "prettier --write --plugin-search-dir=. .",
+    "patch": "node scripts/patch.js",
+    "postinstall": "npm run patch"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.16.0",
@@ -28,7 +30,6 @@
   },
   "type": "module",
   "dependencies": {
-    "highlight.js": "^11.5.1",
     "nanoid": "^4.0.0",
     "parse5": "^7.0.0",
     "sass": "^1.55.0",
