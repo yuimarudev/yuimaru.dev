@@ -10,7 +10,9 @@
 
   onMount(async () => {
     const hljs = (await import("highlight.js")).default;
-    hljs.highlightAll();
+    document.querySelectorAll("pre code").forEach((e) => {
+      hljs.highlightElement(e);
+    });
   });
 </script>
 
