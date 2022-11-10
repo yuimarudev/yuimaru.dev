@@ -9,10 +9,14 @@
   let data;
 
   onMount(async () => {
-    const shiki = await (await import("shiki")).getHighlighter({ theme: "nord" });
-    document.querySelectorAll("pre code").forEach(e => {
-      e.innerHTML = shiki.codeToHtml(e.innerHTML);
-    })
+    const shiki = await import("shiki");
+    shiki.setCDN("https://unpkg.com/shiki/");
+    const highlighter = await shiki.getHighlighter({
+      theme: "github-dark"
+    });
+    [...document.querySelectorAll("pre code")].forEach((e) => {
+      e.innerHTML = highlighter.codeToHtml(e.innerHTML);
+    });
   });
 </script>
 
