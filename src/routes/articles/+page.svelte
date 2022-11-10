@@ -6,9 +6,7 @@
   let articles: Article[] = [];
 
   onMount(async () => {
-    articles = (
-      await client.get({})
-    ).contents;
+    articles = (await client.get({})).contents;
   });
 </script>
 
@@ -20,18 +18,17 @@
 <Row>
   <Col>
     <h1>yuimaruのブログ</h1>
-    <hr>
+    <hr />
     {#each articles as article}
       <Card color="dark">
         <CardBody><a href={"articles/" + article.id}>{article.title}</a></CardBody>
         <CardFooter>
-          {
-            new Intl.DateTimeFormat("ja-jp", { dateStyle: "full", timeStyle: "long" })
-            .format(new Date(article.publishedAt))
-          }
+          {new Intl.DateTimeFormat("ja-jp", { dateStyle: "full", timeStyle: "long" }).format(
+            new Date(article.publishedAt)
+          )}
         </CardFooter>
       </Card>
-      <hr>
+      <hr />
     {/each}
   </Col>
 </Row>

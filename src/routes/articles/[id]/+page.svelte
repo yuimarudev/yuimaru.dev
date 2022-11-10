@@ -9,10 +9,10 @@
   let data;
 
   onMount(async () => {
-    const hljs = (await import("highlight.js")).default;
-    document.querySelectorAll("pre code").forEach((e) => {
-      hljs.highlightElement(e);
-    });
+    const shiki = await (await import("shiki")).getHighlighter({ theme: "nord" });
+    document.querySelectorAll("pre code").forEach(e => {
+      e.innerHTML = shiki.codeToHtml(e.innerHTML);
+    })
   });
 </script>
 
