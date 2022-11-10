@@ -5,7 +5,7 @@
   let data: {article: Article};
 
   onMount(async () => {
-    const shiki = await import("shiki");
+    /*const shiki = await import("shiki");
     shiki.setCDN("https://unpkg.com/shiki/");
 
     /*const langs = [...document.querySelectorAll("pre code")].map(e => e.innerHTML.split("\n")[0]);
