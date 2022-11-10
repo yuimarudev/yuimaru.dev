@@ -9,6 +9,7 @@
     articles = (
       await client.get({})
     ).contents;
+    (await import("highlight.js")).default.highlightAll();
   });
 </script>
 
