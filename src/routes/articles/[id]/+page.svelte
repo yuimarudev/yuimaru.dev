@@ -1,14 +1,17 @@
-<script lang="ts">
+<script>
   import { Row, Col } from "sveltestrap";
   import { onMount } from "svelte";
 
-  let data: {article: Article};
+  /**
+   * @type {{article: Article}}
+   */
+  let data;
 
   onMount(async () => {
-    /*const shiki = await import("shiki");
+    const shiki = await import("shiki");
     shiki.setCDN("https://unpkg.com/shiki/");
 
-    /*const langs = [...document.querySelectorAll("pre code")].map(e => e.innerHTML.split("\n")[0]);
+    const langs = [...document.querySelectorAll("pre code")].map(e => e.innerHTML.split("\n")[0]);
     const highlighter = await shiki.getHighlighter({
       theme: "github-dark",
       // @ts-ignore
@@ -18,7 +21,7 @@
       const [lang, ...lines] = e.innerHTML.split("\n");
       const code = lines.join("\n");
       e.innerHTML = highlighter.codeToHtml(code, lang);
-    });*/
+    });
   });
 </script>
 
