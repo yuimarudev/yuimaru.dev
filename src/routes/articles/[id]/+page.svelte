@@ -1,20 +1,21 @@
-<script>
+<script lang="ts">
   import { Row, Col } from "sveltestrap";
   import { onMount } from "svelte";
-  import "highlight.js/styles/github-dark.css";
+  import type { Lang } from "shiki";
 
-  export /**
-   * @type {{article: Article}}
-   */
-  let data;
+
+  let data: {article: Article};
 
   onMount(async () => {
     const shiki = await import("shiki");
     shiki.setCDN("https://unpkg.com/shiki/");
+
+    const langs = [...document.querySelectorAll("pre code")].map(e => e.innerHTML.split("\n")[0] as Lang);
     const highlighter = await shiki.getHighlighter({
-      theme: "github-dark"
+      theme: "github-dark",
+      langs
     });
-    [...document.querySelectorAll("pre code")].forEach((e) => {
+    document.querySelectorAll("pre code").forEach((e) => {
       const [lang, ...lines] = e.innerHTML.split("\n");
       const code = lines.join("\n");
       e.innerHTML = highlighter.codeToHtml(code, lang);
