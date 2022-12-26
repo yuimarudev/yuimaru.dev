@@ -1,7 +1,8 @@
 import client from "$lib/client";
+import type { Load } from "@sveltejs/kit";
 
-export async function load({ params }: { params: Record<string, string> }): Promise<Object> {
-  const article = await client
+export const load: Load = async ({ params, url }) => {
+  const article = await client(url.href)
     .get({
       contentId: params.id
     })
@@ -13,6 +14,7 @@ export async function load({ params }: { params: Record<string, string> }): Prom
     };
 
   return {
-    status: 400
+    status: 400,
+    article
   };
-}
+};

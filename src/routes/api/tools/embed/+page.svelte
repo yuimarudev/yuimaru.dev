@@ -1,6 +1,6 @@
 <script lang="ts">
-  import {page} from "$app/stores"
-  $page.data
+  import { page } from "$app/stores";
+  $page.data;
 </script>
 
 <body

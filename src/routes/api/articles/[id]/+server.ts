@@ -16,11 +16,10 @@ async function apiRequest({
         "X-MICROCMS-API-KEY": apiKey
       }
     }
-  )
-    .then(async (r) => await r.json());
+  ).then(async (r) => await r.json());
 }
 
-export async function GET({ params, platform }: { params: Record<string, string>, platform: any }) {
+export async function GET({ params, platform }: { params: Record<string, string>; platform: any }) {
   let isList = params.id === "LIST";
 
   let res = await apiRequest({

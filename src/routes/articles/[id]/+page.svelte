@@ -1,10 +1,7 @@
-<script>
-  import { Row, Col } from "sveltestrap";
+<script lang="ts">
+  import { Row, Column } from "carbon-components-svelte";
   import { onMount } from "svelte";
-  export /**
-   * @type {{article: Article}}
-   */
-  let data;
+  export let data: { article: Article };
 
   onMount(async () => {
     const shiki = await import("shiki");
@@ -16,10 +13,10 @@
       // @ts-ignore
       langs
     });
-    document.querySelectorAll("pre code").forEach((e) => {
-      const [lang, ...lines] = e.innerHTML.split("\n");
+
+    document.querySelectorAll<HTMLPreElement>("pre code").forEach((e) => {
+      const [lang, ...lines] = e.innerText.split("\n");
       const code = lines.join("\n");
-      console.log(highlighter.codeToHtml(code, lang));
       e.innerHTML = highlighter.codeToHtml(code, lang);
     });
   });
@@ -31,7 +28,7 @@
 </svelte:head>
 
 <Row>
-  <Col>
+  <Column>
     <h1>{data.article.title}</h1>
     <p>
       {data.article.publishedAt
@@ -44,5 +41,5 @@
     <div id="content">
       {@html data.article.content}
     </div>
-  </Col>
+  </Column>
 </Row>

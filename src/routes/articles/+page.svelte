@@ -1,12 +1,12 @@
 <script lang="ts">
   import client from "$lib/client";
   import { onMount } from "svelte";
-  import { Row, Col, Card, CardBody, CardFooter } from "sveltestrap";
+  import { Row, Column, ClickableTile } from "carbon-components-svelte";
 
   let articles: Article[] = [];
 
   onMount(async () => {
-    articles = (await client.get({})).contents;
+    articles = (await client(location.href).get({})).contents;
   });
 </script>
 
@@ -16,19 +16,19 @@
 </svelte:head>
 
 <Row>
-  <Col>
+  <Column>
     <h1>yuimaruのブログ</h1>
     <hr />
     {#each articles as article}
-      <Card color="dark">
-        <CardBody><a href={"articles/" + article.id}>{article.title}</a></CardBody>
-        <CardFooter>
+      <ClickableTile href={"articles/" + article.id}>
+        <p>{article.title}</p>
+        <footer>
           {new Intl.DateTimeFormat("ja-jp", { dateStyle: "full", timeStyle: "long" }).format(
             new Date(article.publishedAt)
           )}
-        </CardFooter>
-      </Card>
+        </footer>
+      </ClickableTile>
       <hr />
     {/each}
-  </Col>
+  </Column>
 </Row>

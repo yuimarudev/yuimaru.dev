@@ -1,34 +1,40 @@
 import client from "$lib/client";
+import type { RequestHandler } from "@sveltejs/kit";
 
-export async function GET() {
+export const GET: RequestHandler = async ({ request }) => {
+  const url = new URL(request.url);
   let urls = [
     {
-      loc: "https://yuimaru.dev/",
+      loc: url.origin,
       lastmod: "2022-07-09",
       priority: 1.0,
       changefreq: "monthly"
     },
     {
-      loc: "https://yuimaru.dev/about",
+      loc: url.origin + "/about",
       lastmod: "2022-07-09",
       priority: 0.8,
       changefreq: "monthly"
     },
     {
-      loc: "https://yuimaru.dev/articles",
+      loc: url.origin + "/articles",
       lastmod: "2022-07-09",
       priority: 0.8,
       changefreq: "monthly"
     }
   ];
 
-  const articles = await client.get<null>().catch(console.error);
+  const articles = await client(request.url).get<null>().catch(console.error);
   if (articles) {
     for (let article of articles.contents) {
       const date = new Date(article.updatedAt);
       urls.push({
-        loc: "https://yuimaru.dev/articles/" + article.id,
-        lastmod: [date.getFullYear(), date.getMonth().toString().padStart(2, "0"), date.getDay().toString().padStart(2, "0")].join("-"),
+        loc: url.origin + "/articles/" + article.id,
+        lastmod: [
+          date.getFullYear(),
+          date.getMonth().toString().padStart(2, "0"),
+          date.getDay().toString().padStart(2, "0")
+        ].join("-"),
         priority: 0.6,
         changefreq: "Monthly"
       });
@@ -54,4 +60,4 @@ export async function GET() {
       }
     }
   );
-}
+};

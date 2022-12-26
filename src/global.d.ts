@@ -13,7 +13,7 @@ declare namespace App {
   interface Platform {
     env: {
       KV: KVNamespace;
-      filer: R2Bucket
+      filer: R2Bucket;
     };
   }
 }

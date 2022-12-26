@@ -1,15 +1,13 @@
 <script lang="ts">
   import {
     Row,
-    Col,
-    Input,
+    Column,
+    NumberInput,
+    TextInput,
     FormGroup,
-    Label,
-    Card,
-    CardHeader,
-    CardBody,
+    Tile,
     Button
-  } from "sveltestrap";
+  } from "carbon-components-svelte";
 
   const blackCount = [0, 1000, 2000];
   let product: string = "";
@@ -63,25 +61,34 @@
 </svelte:head>
 
 <Row>
-  <Col>
+  <Column>
     <h1>5sim checker</h1>
     <FormGroup>
-      <Label>Amount</Label>
-      <Input on:keypress={(e) => e.charCode === 13 ? checkOnclick() : null} class="bg-dark text-light" type="number" bind:value={amount} />
-      <Label>Product</Label>
-      <Input on:keypress={(e) => e.charCode === 13 ? checkOnclick() : null} class="bg-dark text-light" bind:value={product} />
+      <NumberInput
+        label="Amount"
+        on:keyup={(e) => (e.charCode === 13 ? checkOnclick() : null)}
+        class="bg-dark text-light"
+        type="number"
+        bind:value={amount}
+      />
+      <TextInput
+        labelText="Product"
+        on:keyup={(e) => (e.charCode === 13 ? checkOnclick() : null)}
+        class="bg-dark text-light"
+        bind:value={product}
+      />
       <hr />
       <Button on:click={checkOnclick} color="success">Check</Button>
     </FormGroup>
     <hr />
     {#each results as result, i}
-      <Card color="dark">
-        <CardHeader>{product}で{i + 1}番目に安い</CardHeader>
-        <CardBody
-          >{result.country}のチャネル{result.channelId}です。値段は{result.cost}ロシアルーブルで在庫数が{result.count}個です。</CardBody
-        >
-      </Card>
+      <Tile>
+        <p>{product}で{i + 1}番目に安い</p>
+        <footer>
+          {result.country}のチャネル{result.channelId}です。値段は{result.cost}ロシアルーブルで在庫数が{result.count}個です。
+        </footer>
+      </Tile>
       <hr />
     {/each}
-  </Col>
+  </Column>
 </Row>

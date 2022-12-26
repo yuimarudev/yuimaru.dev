@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-  import { Row, Col } from "sveltestrap";
+  import { Row, Column } from "carbon-components-svelte";
 </script>
 
 <svelte:head>
@@ -12,10 +12,10 @@
 </svelte:head>
 
 <Row>
-  <Col>
+  <Column>
     <div>
       <h1>yuimaruのへや</h1>
       <p>Blogと自分について</p>
     </div>
-  </Col>
+  </Column>
 </Row>

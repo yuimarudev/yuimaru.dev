@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Row, Col, Card, CardHeader, CardLink, CardBody } from "sveltestrap";
+  import { Row, Column, ClickableTile } from "carbon-components-svelte";
 
   const tools = [
     {
@@ -16,15 +16,16 @@
 </svelte:head>
 
 <Row>
-  <Col>
+  <Column>
     <h1>Tools</h1>
     <p>適当に作ったものを置きます</p>
+    <hr />
     {#each tools as tool}
-      <Card color="dark">
-        <CardHeader><CardLink href={tool.href}>{tool.name}</CardLink></CardHeader>
-        <CardBody>{tool.description}</CardBody>
-      </Card>
+      <ClickableTile href={tool.href}>
+        <p>{tool.name}</p>
+        <footer>{tool.description}</footer>
+      </ClickableTile>
       <hr />
     {/each}
-  </Col>
+  </Column>
 </Row>
