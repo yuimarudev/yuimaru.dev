@@ -4,7 +4,7 @@
 
 <svelte:head>
   <title>yuimaru</title>
-  <meta name="description" content="yuimaruのへや (404)" />
+  <meta name="description" content="yuimaru (404)" />
 </svelte:head>
 
 <Row>

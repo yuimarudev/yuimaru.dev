@@ -8,13 +8,13 @@
 
 <svelte:head>
   <title>yuimaru</title>
-  <meta name="description" content="yuimaruのへや" />
+  <meta name="description" content="yuimaru" />
 </svelte:head>
 
 <Row>
   <Column>
     <div>
-      <h1>yuimaruのへや</h1>
+      <h1>yuimaru</h1>
       <p>Blogと自分について</p>
     </div>
   </Column>
