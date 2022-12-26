@@ -55,28 +55,6 @@
   </p>
 </footer>
 
-<!--
-<Navbar color="dark" dark expand="md">
-  <NavbarBrand href="/">yuimaru</NavbarBrand>
-  <Nav class="ms-auto" navbar>
-    <NavItem>
-      <NavLink href="/about">About</NavLink>
-    </NavItem>
-    <NavItem>
-      <NavLink href="/articles">Blog</NavLink>
-    </NavItem>
-    <NavItem>
-      <NavLink href="/tools">Tools</NavLink>
-    </NavItem>
-  </Nav>
-</Navbar>
-<Container>
-  <main>
-    <slot />
-  </main>
-</Container>
-<div class="static" />
--->
 <style lang="scss">
   .padding {
     padding-bottom: 5rem;
