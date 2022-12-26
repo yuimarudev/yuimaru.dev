@@ -46,7 +46,7 @@
     このサイトは
     <a href="https://kit.svelte.dev">SvelteKit</a>
     と
-    <a href="https://unko.js.org">unko</a>
+    <a href="https://carbondesignsystem.com/">Carbon</a>
     と
     <a href="https://microcms.io/">microCMS</a>
     を使用していて、
