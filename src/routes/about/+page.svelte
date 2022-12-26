@@ -17,11 +17,12 @@
         に、なりたい
       </p>
       <p>このサイトの<a href="https://github.com/yuimarudev/yuimaru.dev">ソースコード</a></p>
-      <a href="https://github.com/yuimarudev">GitHub</a>
+      <a href="https://github.com/yuimarudev">GitHubアカウント</a>
+      <p>
+        このサイトは<a href="https://www.cloudflare.com/ja-jp/web-analytics/"
+          >Cloudflare Analytics</a
+        >によるアクセス解析をしています
+      </p>
     </div>
-  </Column>
-  <Column>
-    <h2>ここは？</h2>
-    <p>備忘録に使っています。SvelteやCloudflareのことを書いていきたいな〜と思ってます・・・</p>
   </Column>
 </Row>
