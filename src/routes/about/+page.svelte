@@ -12,9 +12,9 @@
     <div>
       <h1>About me</h1>
       <p>
-        <Tooltip triggerText="TypeScripter"
+        <Tooltip triggerText="TypeScripter" direction="right"
           ><a href="https://www.typescriptlang.org/">TypeScript</a>使いのこと。</Tooltip
-        >と<Tooltip triggerText="Rustacean"
+        >と<Tooltip triggerText="Rustacean" direction="right"
           ><p>
             <a href="https://www.rust-lang.org/ja">Rust</a>使いのこと。<br />多分<a
               href="https://www.rust-lang.org/ja">Rust</a
