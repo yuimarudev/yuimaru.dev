@@ -69,14 +69,12 @@
         on:keyup={(e) => (e.charCode === 13 ? checkOnclick() : null)}
         class="bg-dark text-light"
         type="number"
-        bind:value={amount}
-      />
+        bind:value={amount} />
       <TextInput
         labelText="Product"
         on:keyup={(e) => (e.charCode === 13 ? checkOnclick() : null)}
         class="bg-dark text-light"
-        bind:value={product}
-      />
+        bind:value={product} />
       <hr />
       <Button on:click={checkOnclick} color="success">Check</Button>
     </FormGroup>
