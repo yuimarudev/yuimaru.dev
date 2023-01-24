@@ -29,6 +29,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/adapter-static": "^1.0.5",
     "carbon-components-svelte": "^0.70.13",
     "nanoid": "^4.0.0",
     "parse5": "^7.0.0",
