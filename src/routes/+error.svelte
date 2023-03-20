@@ -7,11 +7,7 @@
   <meta name="description" content="yuimaru (404)" />
 </svelte:head>
 
-<Row>
-  <Column>
-    <div>
-      <h1>えらーやん（わら）</h1>
-      <p>ページは存在しているカナ？</p>
-    </div>
-  </Column>
-</Row>
+<div class="flex center">
+  <h1>えらーやん（わら）</h1>
+  <p>ぺーじはそんざいしているかな？</p>
+</div>

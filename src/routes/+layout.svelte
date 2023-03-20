@@ -1,72 +1,37 @@
-<script lang="ts">
-  import "carbon-components-svelte/css/g100.css";
-  import {
-    Content,
-    Header,
-    HeaderNav,
-    HeaderNavItem,
-    SkipToContent,
-    SideNav,
-    SideNavItems,
-    SideNavLink
-  } from "carbon-components-svelte";
+<header class="flex">
+  <div>
+    <a href="/"><h2>ゆいまる</h2></a>
+  </div>
+  <div>
+    <a href="/articles"><p>ブログ</p></a>
+  </div>
+</header>
 
-  let isSideNavOpen = false;
-</script>
-
-<Header persistentHamburgerMenu expandedByDefault company="yuimaru" bind:isSideNavOpen>
-  <svelte:fragment slot="skip-to-content">
-    <SkipToContent />
-  </svelte:fragment>
-  <HeaderNav>
-    <HeaderNavItem href="/" text="Home" />
-    <HeaderNavItem href="/about" text="About" />
-    <HeaderNavItem href="/articles" text="Blog" />
-    <HeaderNavItem href="/tools" text="Tool" />
-  </HeaderNav>
-</Header>
-
-<SideNav bind:isOpen={isSideNavOpen}>
-  <SideNavItems>
-    <SideNavLink href="/" text="Home" />
-    <SideNavLink href="/about" text="About" />
-    <SideNavLink href="/articles" text="Blog" />
-    <SideNavLink href="/tools" text="Tool" />
-  </SideNavItems>
-</SideNav>
-
-<Content>
+<div class="main">
   <slot />
-</Content>
-
-<div class="padding" />
-
-<footer>
-  <p>
-    このサイトは
-    <a href="https://kit.svelte.dev">SvelteKit</a>
-    と
-    <a href="https://carbondesignsystem.com/">Carbon</a>
-    と
-    <a href="https://microcms.io/">microCMS</a>
-    を使用していて、
-    <a href="https://pages.dev">Cloudflare Pages</a>
-    上で動いています。
-  </p>
-</footer>
+</div>
 
 <style lang="scss">
-  .padding {
-    padding-bottom: 5rem;
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4em;
+    background-color: #ddc29c;
+    justify-content: space-between;
+    align-items: center;
+    * {
+      margin: 1em;
+    }
   }
 
-  footer {
-    border-top: 1px solid #ffffff;
-    padding: 1rem;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    text-align: center;
+  .main {
+    height: calc(100vh - 4em);
+    margin-top: 4em;
+  }
+
+  a:hover {
+    text-decoration: dotted;
   }
 </style>
