@@ -1,8 +1,9 @@
 <script lang="ts">
   import client from "$lib/client";
+  import Card from "$lib/component/Card.svelte";
   import { onMount } from "svelte";
-  import { Row, Column, ClickableTile } from "carbon-components-svelte";
 
+  const formatter = new Intl.DateTimeFormat("ja-jp", { dateStyle: "full", timeStyle: "long" });
   let articles: Article[] = [];
 
   onMount(async () => {
@@ -15,20 +16,17 @@
   <meta name="description" content="yuimaruのBlog" />
 </svelte:head>
 
-<Row>
-  <Column>
-    <h1>yuimaruのブログ</h1>
-    <hr />
-    {#each articles as article}
-      <ClickableTile href={"articles/" + article.id}>
-        <p>{article.title}</p>
-        <footer>
-          {new Intl.DateTimeFormat("ja-jp", { dateStyle: "full", timeStyle: "long" }).format(
-            new Date(article.publishedAt)
-          )}
-        </footer>
-      </ClickableTile>
-      <hr />
-    {/each}
-  </Column>
-</Row>
+<div class="flex center main">
+  {#each articles as article}
+    <Card href="articles/{article.id}" title={article.title}>
+      <p>{formatter.format(new Date(article.publishedAt))}</p>
+    </Card>
+  {/each}
+</div>
+
+<style lang="scss">
+  .main {
+    margin: 8em;
+    flex-direction: column;
+  }
+</style>

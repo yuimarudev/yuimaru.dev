@@ -10,3 +10,4 @@ node_modules
 .cloudflare
 wrangler.toml
 .mf
+.dev.vars

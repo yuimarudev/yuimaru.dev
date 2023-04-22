@@ -3,8 +3,8 @@
 }
 
 body {
-  color: #ffffff;
-  background: #0c344c;
+  color: #fff;
+  background: rgb(18, 18, 18);
 }
 
 .center {
@@ -45,7 +45,7 @@ pre code pre code span {
 
 a {
   text-decoration: none;
-  color: #3c1c84;
+  color: #0288d1;
 }
 
 html, body {

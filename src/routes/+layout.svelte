@@ -2,8 +2,9 @@
   <div>
     <a href="/"><h2>ゆいまる</h2></a>
   </div>
-  <div>
+  <div class="rh">
     <a href="/articles"><p>ブログ</p></a>
+    <a href="/about"><p>誰？</p></a>
   </div>
 </header>
 
@@ -18,7 +19,7 @@
     left: 0;
     right: 0;
     height: 4em;
-    background-color: #ddc29c;
+    background-color: rgb(18, 18, 18);
     justify-content: space-between;
     align-items: center;
     * {
@@ -32,6 +33,10 @@
   }
 
   a:hover {
-    text-decoration: dotted;
+    text-decoration: underline;
+  }
+
+  .rh {
+    display: flex;
   }
 </style>
