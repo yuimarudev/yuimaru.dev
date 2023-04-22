@@ -8,7 +8,7 @@ async function apiRequest({
   domain: string;
   endpoint: string;
   contentId?: string;
-}): Promise<Object | string> {
+}): Promise<Object | string> {3
   return await fetch(
     `https://${domain}.microcms.io/api/v1/${endpoint}${contentId ? "/" + contentId : ""}`,
     {

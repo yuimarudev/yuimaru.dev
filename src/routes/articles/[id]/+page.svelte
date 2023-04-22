@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { Row, Column } from "carbon-components-svelte";
   import { onMount } from "svelte";
   export let data: { article: Article };
 
@@ -27,19 +26,28 @@
   <meta name="description" content="yuimaruのBlog" />
 </svelte:head>
 
-<Row>
-  <Column>
-    <h1>{data.article.title}</h1>
-    <p>
-      {data.article.publishedAt
-        ? new Intl.DateTimeFormat("ja-jp", { dateStyle: "full", timeStyle: "long" }).format(
-            new Date(data.article.publishedAt)
-          )
-        : ""}
-    </p>
-    <hr />
-    <div id="content">
-      {@html data.article.content}
-    </div>
-  </Column>
-</Row>
+<div class="flex main">
+  <h1 style:margin-bottom="0">{data.article.title}</h1>
+  <p style:margin="0">
+    {data.article.publishedAt
+      ? new Intl.DateTimeFormat("ja-jp", { dateStyle: "full", timeStyle: "long" }).format(
+          new Date(data.article.publishedAt)
+        )
+      : ""}
+  </p>
+  <hr />
+  <div id="content">
+    {@html data.article.content}
+  </div>
+</div>
+
+<style>
+  .main {
+    margin: 1rem;
+    flex-direction: column;
+  }
+
+  hr {
+    width: 100%;
+  }
+</style>
