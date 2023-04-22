@@ -23,7 +23,7 @@
     justify-content: space-between;
     align-items: center;
     * {
-      margin: 1em;
+      margin: 0 1rem;
     }
   }
 

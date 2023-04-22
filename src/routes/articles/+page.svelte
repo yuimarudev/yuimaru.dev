@@ -26,7 +26,7 @@
 
 <style lang="scss">
   .main {
-    margin: 8em;
+    margin: 1rem;
     flex-direction: column;
   }
 </style>
