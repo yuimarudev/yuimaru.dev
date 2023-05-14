@@ -19,7 +19,7 @@
   .card {
     width: 100%;
     background: #242424;
-    height: 15vh;
+    height: 9em;
     border-radius: 5px;
     justify-content: space-around;
     flex-direction: column;
@@ -27,6 +27,7 @@
 
     * {
       margin-left: 1em;
+      margin-right: 1em;
     }
   }
 
