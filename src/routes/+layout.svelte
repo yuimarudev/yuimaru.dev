@@ -22,6 +22,7 @@
     background-color: rgb(18, 18, 18);
     justify-content: space-between;
     align-items: center;
+    word-break: keep-all;
     * {
       margin: 0 1rem;
     }
