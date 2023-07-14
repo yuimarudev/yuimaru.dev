@@ -9,7 +9,7 @@
 
 <div class="main flex center">
   <div class="wrapper flex">
-    <img src="/favicon.png" alt="yuimaru's icon" />
+    <img src="/favicon.png" alt="yuimaru's icon" height="512" width="512" />
     <div class="flex col center">
       <p>こんにちは。ゆいまるです。</p>
       <div class="flex center">
