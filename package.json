@@ -17,6 +17,7 @@
     "@cloudflare/workers-types": "^4.20221111.1",
     "@sveltejs/adapter-cloudflare": "^1.1.0",
     "@sveltejs/kit": "^1.15.7",
+    "budoux": "^0.5.2",
     "carbon-preprocess-svelte": "^0.9.1",
     "prettier": "^2.8.0",
     "prettier-plugin-svelte": "^2.8.1",
