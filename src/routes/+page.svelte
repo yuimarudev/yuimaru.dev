@@ -2,9 +2,11 @@
   import { onMount } from "svelte";
   import { GithubBrand } from "svelte-awesome-icons";
   import { loadDefaultJapaneseParser } from "budoux";
+  let isChrome = false;
 
   onMount(async () => {
     const parser = loadDefaultJapaneseParser();
+    isChrome = /Chrome\/[0-9.]+/.test(navigator.userAgent);
 
     document.querySelectorAll<HTMLParagraphElement>("p.budoux").forEach((e) => {
       parser.applyElement(e);
@@ -57,24 +59,40 @@
     </div>
     <div class="container">
       <h3>ポーカー</h3>
-      <p class="budoux">
-        同上
-      </p>
+      <p class="budoux">同上</p>
     </div>
   </div>
 
-  <div class="margin" />
+  <div class="margin {isChrome ? 'chrome' : ''}">
+    <div class="footer"><p>s</p></div>
+  </div>
 </div>
 
 <style lang="scss">
-
   // fuck chrome!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  .margin.chrome {
+    display: block;
+    height: 5vh;
+  }
+
   .margin {
-    height: 10vh;
+    display: none;
+  }
+
+  .footer {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 4em;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    border: solid 1px #0288d1;
   }
 
   .favorite {
-    margin: 10vh 10vw;
+    margin: 5vh 10vw;
     display: flex;
     flex-direction: column;
     border: solid 1px #0288d1;
