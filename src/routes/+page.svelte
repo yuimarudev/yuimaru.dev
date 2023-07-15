@@ -8,7 +8,7 @@
     const parser = loadDefaultJapaneseParser();
     isChrome = /Chrome\/[0-9.]+/.test(navigator.userAgent);
 
-    document.querySelectorAll<HTMLParagraphElement>("p.budoux").forEach((e) => {
+    document.querySelectorAll<HTMLParagraphElement>("p").forEach((e) => {
       parser.applyElement(e);
     });
   });
@@ -64,7 +64,7 @@
   </div>
 
   <div class="margin {isChrome ? 'chrome' : ''}">
-    <div class="footer"><p>s</p></div>
+    <div class="footer"><p class="foot-text">あなたはChrome/Blinkを使用しています。やめませんか？</p></div>
   </div>
 </div>
 
@@ -88,7 +88,9 @@
     align-items: center;
     left: 0;
     bottom: 0;
+    right: 0;
     border: solid 1px #0288d1;
+    background-color: #242424;
   }
 
   .favorite {
