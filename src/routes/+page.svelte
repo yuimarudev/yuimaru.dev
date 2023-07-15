@@ -62,9 +62,17 @@
       </p>
     </div>
   </div>
+
+  <div class="margin" />
 </div>
 
 <style lang="scss">
+
+  // fuck chrome!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  .margin {
+    height: 10vh;
+  }
+
   .favorite {
     margin: 10vh 10vw;
     display: flex;
