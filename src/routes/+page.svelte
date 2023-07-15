@@ -74,7 +74,12 @@
 
     .container {
       margin-left: 2em;
+      margin-right: 2em;
       border-top: solid 1px #0288d1;
+    }
+
+    .budoux {
+      margin-left: 1.5em;
     }
 
     * {
