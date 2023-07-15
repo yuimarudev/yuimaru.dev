@@ -34,7 +34,7 @@
   </div>
 
   <div class="favorite">
-    <h2>すきなもの</h2>
+    <h2>すきなもの（作品）</h2>
     <div class="container">
       <h3>ガラスの花と壊す世界</h3>
       <p class="budoux">
@@ -51,6 +51,10 @@
       <h3>スローループ</h3>
       <p class="budoux">ひよりがめちゃくちゃ可愛いので全人類一回は見ろ。</p>
     </div>
+  </div>
+
+  <div class="favorite">
+    <h2>すきなもの（あそび）</h2>
     <div class="container">
       <h3>チェス</h3>
       <p class="budoux">
