@@ -68,7 +68,9 @@
   </div>
 
   <div class="margin {isChrome ? 'chrome' : ''}">
-    <div class="footer"><p class="foot-text">あなたはChrome/Blinkを使用しています。やめませんか？</p></div>
+    <div class="footer">
+      <p class="foot-text">あなたはChrome/Blinkを使用しています。やめませんか？</p>
+    </div>
   </div>
 </div>
 
