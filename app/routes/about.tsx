@@ -11,7 +11,7 @@ export const meta: MetaFunction = () => {
     },
     {
       property: "og:image",
-      content: "/favicon.webp",
+      content: "https://yuimaru.dev/favicon.webp",
     },
     { property: "og:url", content: "https://yuimaru.dev/about" },
     { property: "og:site_name", content: "yuimaru" },

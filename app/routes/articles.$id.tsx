@@ -21,7 +21,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
     },
     {
       property: "og:image",
-      content: `/articles/${data?.data.id}/og.png`,
+      content: `https://yuimaru.dev/articles/${data?.data.id}/og.png`,
     },
     {
       property: "og:url",

@@ -9,7 +9,7 @@ export const meta: MetaFunction = () => {
       name: "description",
       content: "yuimaru のサイト",
     },
-    { property: "og:image", content: "/favicon.webp" },
+    { property: "og:image", content: "https://yuimaru.dev/favicon.webp" },
     { property: "og:url", content: "https://yuimaru.dev/" },
     { property: "og:site_name", content: "yuimaru" },
     { property: "og:title", content: "yuimaru" },

@@ -13,7 +13,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
     },
     {
       property: "og:image",
-      content: "/favicon.webp",
+      content: "https://yuimaru.dev/favicon.webp",
     },
     { property: "og:url", content: "https://yuimaru.dev/articles" },
     { property: "og:site_name", content: "yuimaru" },
