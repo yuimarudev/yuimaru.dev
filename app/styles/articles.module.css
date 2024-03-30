@@ -1,0 +1,14 @@
+.ssr {
+  display: none;
+}
+
+.article_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.code {
+  background-color: #24292e;
+  padding: 1em;
+  overflow: scroll;
+}

@@ -1,0 +1,20 @@
+.body {
+  background-color: #1b1b1b;
+  color: #ccc;
+}
+
+.wrapper {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  max-width: 50rem;
+}
+
+@media screen and (max-width: 920px) {
+  .main {
+    max-width: 100%;
+  }
+} 

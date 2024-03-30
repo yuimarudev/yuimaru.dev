@@ -1,0 +1,90 @@
+.quarter {
+  &::after {
+    content: " ";
+    display: inline;
+    font-family: "source-han-sans-cjk-ja";
+    letter-spacing: -0.1rem;
+  }
+}
+
+.text-wrapper {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  line-break: strict;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: stretch;
+  position: sticky;
+  top: 0;
+  background: inherit;
+}
+
+.header {
+  display: flex;
+  padding: 1rem;
+  height: 5rem;
+  justify-content: space-between;
+  width: 100vw;
+  align-items: center;
+  color: #1c9cf4;
+}
+
+.header * {
+  margin: 0;
+  padding: 0;
+  height: min-content;
+  font-size: 1.125rem;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card {
+  border-bottom: solid 1px #fff;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  max-width: max-content;
+  display: block;
+  overflow: hidden;
+}
+
+.card > details > summary {
+  list-style: none;
+}
+
+.anchor {
+  text-decoration: none;
+  color: #ccc;
+  max-width: max-content;
+  display: block;
+}
+
+.card > details > summary > h3 {
+  text-decoration: underline dashed;
+  color: #ccc;
+}
+
+.card > details > p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card > details > p > span {
+  white-space: nowrap;
+}

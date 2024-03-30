@@ -1,0 +1,21 @@
+diff --git a/dist/edge-parser.js b/dist/edge-parser.js
+index 3d1db06a6c7e0b24de88cdf5a0093abc5f37ef9b..5eed241038371a3d1d5c282506de45452669f48f 100644
+--- a/dist/edge-parser.js
++++ b/dist/edge-parser.js
+@@ -16,7 +16,6 @@
+ import { model as jaModel } from "budoux/module/data/models/ja.js";
+ import { model as zhHansModel } from "budoux/module/data/models/zh-hans.js";
+ import { model as zhHantModel } from "budoux/module/data//models/zh-hant.js";
+-import { sum } from "budoux/dist/utils.js";
+ export class Parser {
+     constructor(model) {
+         this.model = new Map(Object.entries(model).map(([k, v]) => [k, new Map(Object.entries(v))]));
+@@ -31,7 +30,7 @@ export class Parser {
+         if (sentence === "")
+             return [];
+         const result = [sentence[0]];
+-        const baseScore = -0.5 * sum([...this.model.values()].map((group) => [...group.values()]).flat());
++        const baseScore = -0.5 * [...this.model.values()].map((group) => [...group.values()]).flat().reduce((prev, curr) => prev + curr, 0);
+         for (let i = 1; i < sentence.length; i++) {
+             let score = baseScore;
+             score += this.model.get("UW1")?.get(sentence.slice(i - 3, i - 2)) || 0;

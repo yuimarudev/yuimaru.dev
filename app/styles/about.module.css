@@ -1,0 +1,14 @@
+.about {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.about h2 {
+  font-weight: bold;
+}
+
+.about li {
+  list-style-type: "- ";
+}
