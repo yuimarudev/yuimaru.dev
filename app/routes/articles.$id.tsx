@@ -82,6 +82,19 @@ export default function Article() {
               <CodeBlock lang={child.lang}>{child.value}</CodeBlock>
             </Suspense>
           </div>,
+          <br />,
+        );
+        break;
+
+      case "image":
+        elements.push(
+          <img
+            className={styles.image}
+            src={child.url}
+            alt={String.fromCharCode(
+              ...Array.from(crypto.getRandomValues(new Uint8Array(65535))),
+            )}
+          />,
         );
         break;
 
@@ -117,6 +130,20 @@ export default function Article() {
               break;
             }
 
+            case "image":
+              elements.push(
+                <img
+                  className={styles.image}
+                  src={c.url}
+                  alt={String.fromCharCode(
+                    ...Array.from(
+                      crypto.getRandomValues(new Uint8Array(65535)),
+                    ),
+                  )}
+                />,
+              );
+              break;
+
             default:
               es.push(
                 <div
@@ -129,7 +156,7 @@ export default function Article() {
         }
 
         elements.push(
-          <div>
+          <div style={{ marginBottom: "1em" }}>
             {es}
             <br />
           </div>,
@@ -174,6 +201,9 @@ function CodeBlock({
   lang,
 }: { children: string; lang?: string | null }) {
   const [__html, setHtml] = useState("");
+
+  // fuck
+  if (lang === "rs") lang = "rust";
 
   useEffect(() => {
     (async () => {

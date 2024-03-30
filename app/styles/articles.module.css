@@ -12,3 +12,7 @@
   padding: 1em;
   overflow: scroll;
 }
+
+.image {
+  max-width: min(100%, 360px);
+}
