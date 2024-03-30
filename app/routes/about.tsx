@@ -10,7 +10,7 @@ export const meta: MetaFunction = () => {
       content: "yuimaru とは誰なのかを簡潔に説明します",
     },
     {
-      name: "og:image",
+      property: "og:image",
       content: "/favicon.webp",
     },
     {
