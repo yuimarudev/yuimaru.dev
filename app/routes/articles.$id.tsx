@@ -24,6 +24,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       content: `/articles/${data?.data.id}/og.png`,
     },
     {
+      property: "og:url",
+      content: `https://yuimaru.dev/articles/${data?.data.id}`,
+    },
+    { property: "og:site_name", content: "yuimaru" },
+    { property: "og:title", content: `${data?.data.title} - yuimaru のブログ` },
+    { property: "og:type", content: "article" },
+    {
       name: "twitter:card",
       content: "summary_large_image",
     },

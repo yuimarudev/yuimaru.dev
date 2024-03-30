@@ -15,6 +15,10 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       property: "og:image",
       content: "/favicon.webp",
     },
+    { property: "og:url", content: "https://yuimaru.dev/articles" },
+    { property: "og:site_name", content: "yuimaru" },
+    { property: "og:title", content: "yuimaru のブログ" },
+    { property: "og:type", content: "blog" },
     {
       name: "theme-color",
       content: "#1d9bf0",

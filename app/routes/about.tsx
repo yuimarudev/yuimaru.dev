@@ -13,6 +13,10 @@ export const meta: MetaFunction = () => {
       property: "og:image",
       content: "/favicon.webp",
     },
+    { property: "og:url", content: "https://yuimaru.dev/about" },
+    { property: "og:site_name", content: "yuimaru" },
+    { property: "og:title", content: "yuimaru って誰？" },
+    { property: "og:type", content: "website" },
     {
       name: "theme-color",
       content: "#1d9bf0",
