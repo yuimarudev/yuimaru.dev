@@ -1,7 +1,6 @@
 {
   "name": "yuimaru.dev",
   "private": true,
-  "sideEffects": false,
   "type": "module",
   "scripts": {
     "build": "remix vite:build",
