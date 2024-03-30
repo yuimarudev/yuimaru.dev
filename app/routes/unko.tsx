@@ -31,7 +31,7 @@ export async function action({ context, params, request }: ActionFunctionArgs) {
   if (req.password !== context.cloudflare.env.UNKO)
     return new Response("fuck you", {
       status: 451,
-      statusText: "ahosine",
+      statusText: "sinebaka",
     });
 
   if (req.type === "delete") {

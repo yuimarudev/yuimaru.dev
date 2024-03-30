@@ -12,7 +12,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       content: `現在 ${data?.data.length ?? 0} 件の記事があります`,
     },
     {
-      name: "og:image",
+      property: "og:image",
       content: "/favicon.webp",
     },
     {

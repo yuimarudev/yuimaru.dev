@@ -20,7 +20,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       content: `${data?.data.content.slice(0, 30)}...`,
     },
     {
-      name: "og:image",
+      property: "og:image",
       content: `/articles/${data?.data.id}/og.png`,
     },
     {
