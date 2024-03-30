@@ -47,7 +47,7 @@ devDependencies:
     version: 4.20240222.0
   '@remix-run/dev':
     specifier: ^2.8.0
-    version: 2.8.0(typescript@5.3.3)(vite@5.1.4)(wrangler@3.30.1)
+    version: 2.8.0(sass@1.72.0)(typescript@5.3.3)(vite@5.1.4)(wrangler@3.30.1)
   '@tknf/budoux-edge':
     specifier: ^0.1.0
     version: 0.1.0(patch_hash=f5shkvvwa7pyyovdbxzbu3keua)(budoux@0.6.2)
@@ -84,6 +84,9 @@ devDependencies:
   remark:
     specifier: ^15.0.1
     version: 15.0.1
+  sass:
+    specifier: ^1.72.0
+    version: 1.72.0
   shiki:
     specifier: ^1.2.1
     version: 1.2.1
@@ -92,7 +95,7 @@ devDependencies:
     version: 5.3.3
   vite:
     specifier: ^5.1.0
-    version: 5.1.4
+    version: 5.1.4(sass@1.72.0)
   vite-tsconfig-paths:
     specifier: ^4.2.1
     version: 4.3.1(typescript@5.3.3)(vite@5.1.4)
@@ -1452,7 +1455,7 @@ packages:
       typescript: 5.3.3
     dev: false
 
-  /@remix-run/dev@2.8.0(typescript@5.3.3)(vite@5.1.4)(wrangler@3.30.1):
+  /@remix-run/dev@2.8.0(sass@1.72.0)(typescript@5.3.3)(vite@5.1.4)(wrangler@3.30.1):
     resolution: {integrity: sha512-kZtmK/7vKk7QV8CGCyC9Or3wP7EwL4rOJS9vObmTRAPv8mLyznR8bJxeNVWA7ICnCGejF8s2X3abVJrkEMiFlg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
@@ -1485,7 +1488,7 @@ packages:
       '@remix-run/router': 1.15.2
       '@remix-run/server-runtime': 2.8.0(typescript@5.3.3)
       '@types/mdx': 2.0.11
-      '@vanilla-extract/integration': 6.5.0
+      '@vanilla-extract/integration': 6.5.0(sass@1.72.0)
       arg: 5.0.2
       cacache: 17.1.4
       chalk: 4.1.2
@@ -1524,7 +1527,7 @@ packages:
       tar-fs: 2.1.1
       tsconfig-paths: 4.2.0
       typescript: 5.3.3
-      vite: 5.1.4
+      vite: 5.1.4(sass@1.72.0)
       wrangler: 3.30.1(@cloudflare/workers-types@4.20240222.0)
       ws: 7.5.9
     transitivePeerDependencies:
@@ -1886,7 +1889,7 @@ packages:
       outdent: 0.8.0
     dev: true
 
-  /@vanilla-extract/integration@6.5.0:
+  /@vanilla-extract/integration@6.5.0(sass@1.72.0):
     resolution: {integrity: sha512-E2YcfO8vA+vs+ua+gpvy1HRqvgWbI+MTlUpxA8FvatOvybuNcWAY0CKwQ/Gpj7rswYKtC6C7+xw33emM6/ImdQ==}
     dependencies:
       '@babel/core': 7.24.0
@@ -1900,8 +1903,8 @@ packages:
       lodash: 4.17.21
       mlly: 1.6.1
       outdent: 0.8.0
-      vite: 5.1.4
-      vite-node: 1.3.1
+      vite: 5.1.4(sass@1.72.0)
+      vite-node: 1.3.1(sass@1.72.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -3275,6 +3278,10 @@ packages:
 
   /ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
+    dev: true
+
+  /immutable@4.3.5:
+    resolution: {integrity: sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==}
     dev: true
 
   /imurmurhash@0.1.4:
@@ -5274,6 +5281,16 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
+  /sass@1.72.0:
+    resolution: {integrity: sha512-Gpczt3WA56Ly0Mn8Sl21Vj94s1axi9hDIzDFn9Ph9x3C3p4nNyvsqJoQyVXKou6cBlfFWEgRW4rT8Tb4i3XnVA==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.5
+      source-map-js: 1.0.2
+    dev: true
+
   /saxes@6.0.0:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
@@ -5950,7 +5967,7 @@ packages:
       vfile-message: 4.0.2
     dev: true
 
-  /vite-node@1.3.1:
+  /vite-node@1.3.1(sass@1.72.0):
     resolution: {integrity: sha512-azbRrqRxlWTJEVbzInZCTchx0X69M/XPTCz4H+TLvlTcR/xH/3hkRqhOakT41fMJCMzXTu4UvegkZiEoJAWvng==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -5959,7 +5976,7 @@ packages:
       debug: 4.3.4
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.1.4
+      vite: 5.1.4(sass@1.72.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -5982,13 +5999,13 @@ packages:
       debug: 4.3.4
       globrex: 0.1.2
       tsconfck: 3.0.2(typescript@5.3.3)
-      vite: 5.1.4
+      vite: 5.1.4(sass@1.72.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
     dev: true
 
-  /vite@5.1.4:
+  /vite@5.1.4(sass@1.72.0):
     resolution: {integrity: sha512-n+MPqzq+d9nMVTKyewqw6kSt+R3CkvF9QAKY8obiQn8g1fwTscKxyfaYnC632HtBXAQGc1Yjomphwn1dtwGAHg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -6019,6 +6036,7 @@ packages:
       esbuild: 0.19.12
       postcss: 8.4.35
       rollup: 4.12.0
+      sass: 1.72.0
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
