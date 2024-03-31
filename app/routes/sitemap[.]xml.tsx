@@ -1,7 +1,7 @@
 import { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import { list } from "~/lib/d1.server";
 
-export default async function loader({ request, context }: LoaderFunctionArgs) {
+export async function loader({ request, context }: LoaderFunctionArgs) {
   const url = new URL(request.url);
   const urls = [
     {
