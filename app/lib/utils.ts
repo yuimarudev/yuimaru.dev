@@ -2,6 +2,9 @@ export function __throw(e?: Error): never {
   throw e;
 }
 
-function iterable(x: unknown): x is Iterable<unknown> {
-  return typeof x === "object" && !!x && Symbol.iterator in x;
+export function format(...r: string[]): string {
+  return r.reduce(
+    (a, c, i) => a?.replace(new RegExp(`\\{${i}\\}`, "g"), c),
+    r.shift(),
+  ) as string;
 }
